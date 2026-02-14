@@ -1,0 +1,181 @@
+.brand-history {
+  background: white;
+  padding: 4rem 2rem;
+  margin: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.history-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.history-header h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.history-subtitle {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 3px solid white;
+  border-radius: 50%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 0 0 3px var(--accent);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%) scale(1.1);
+  opacity: 1;
+  box-shadow: 0 0 0 5px rgba(201, 169, 97, 0.3);
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 1.5rem;
+  background: var(--light);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: var(--accent);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.timeline-year {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.timeline-content p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.heritage-section {
+  background: linear-gradient(135deg, rgba(201, 169, 97, 0.05) 0%, rgba(201, 169, 97, 0.02) 100%);
+  padding: 2.5rem;
+  border: 1px solid rgba(201, 169, 97, 0.2);
+  margin-top: 3rem;
+}
+
+.heritage-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.heritage-section p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.heritage-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .brand-history {
+    padding: 2rem 1rem;
+  }
+
+  .history-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    margin-left: 20px;
+  }
+
+  .timeline-dot {
+    left: 0;
+    transform: translateX(-8px);
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-top: -10px;
+  }
+
+  .heritage-section {
+    padding: 1.5rem;
+  }
+
+  .heritage-section h3 {
+    font-size: 1.2rem;
+  }
+}
